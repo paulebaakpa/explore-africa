@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a custom private tour of Morocco. Create your dream tailor-made travel itinerary with expert local guides.">
+  <title>Private Tours of Morocco | Custom Itineraries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="destinations-page">
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="morocco.html" class="logo"><h2>Morocco Travel</h2></a>
+      
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+      
+      <ul class="nav-menu" id="navLinks">
+        <li><a href="morocco.html">Home</a></li>
+        <li><a href="travelmorocco.html" class="active">Custom Tours</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="page-hero" aria-label="Private Tours Banner">
+    <div class="hero-content">
+      <h1>Private Tour of Morocco</h1>
+      <p>Tour Morocco as a private group with your own personal guide.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    
+    <!-- CUSTOM TOURS SECTION -->
+    <section class="intro-section section-padding">
+      <div class="container">
+        
+        <!-- Block 1: Custom Made Description -->
+        <h2>Private Tours</h2>
+        <div class="two-column">
+          <article class="card">
+            <div class="card-body">
+              <h3>Custom Made in Morocco</h3>
+              <p>
+                Here you will find everything you need to decide what you want on a custom tour of Morocco. 
+                Some groups prefer to explore Morocco in their own way, choosing a private driver-guide and 
+                an exclusive tour vehicle.
+              </p>
+              <p>
+                Our private tours of Morocco are tailor-made for your group alone so that you can discover 
+                together the destinations that appeal to you. We love creating bespoke tours to fit our guests 
+                perfectly. It is by far the most satisfying part of our job, and we are ready to create a 
+                custom tour for you.
+              </p>
+            </div>
+          </article>
+          <div class="img-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEqmQ-9iBp_d9YThztWZGHdDoPoEINdZ38NySMMbeo7J5JfZ3c0ODGI0&s=10" 
+                 alt="Traditional scene in the ancient streets of Morocco" 
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- Block 2: Sample Itineraries Description -->
+        <h2>Sample Private Tour Itineraries</h2>
+        <div class="two-column">
+          <article class="card">
+            <div class="card-body">
+              <p>
+                Navigating through the many places to see and activities to experience in Morocco can be a 
+                challenge when creating the ideal Morocco itinerary. Do not worry, this is where our expertise shines. 
+                We have mastered the art of crafting the perfect Morocco tour itinerary, offering a comprehensive 
+                selection to cater to diverse tastes.
+              </p>
+              <p>
+                Our team is ready to create a personalized itinerary tailored just for you. Below, you will find 
+                a curated list of sample Morocco itineraries designed to inspire your journey. These are just 
+                suggestions and can be adjusted to your exact specifications as needed.
+              </p>
+            </div>
+          </article>
+          <div class="img-wrapper">
+            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/a4/2b/d6.jpg" 
+                 alt="Scenic panoramic view of a Moroccan desert safari destination" 
+                 loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLICKABLE TOUR CARDS SECTION -->
+    <section class="cards section-padding">
+      <div class="container">
+        <h2>Explore Available Itineraries</h2>
+        
+        <div class="featured-grid">
+          <a href="morocco-itineraries.html" class="featured-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJKspq_45FyJ6GaVOLvR7PBN6JiOcgt4Ki3YrPwu54LJMAwdMoHEBK2c&s=10');">
+            <div class="card-overlay">
+              <h3>Morocco Itineraries</h3>
+              <p>A short trip to discover the beauty of Morocco &rarr;</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Morocco Travel</h3>
+        <p>Bespoke journeys, private drivers, and authentic Moroccan hospitality.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="morocco.html">Home</a></li>
+          <li><a href="travelmorocco.html">Custom Tours</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Morocco Travel. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- VANILLA JAVASCRIPT -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const hamburger = document.querySelector('.hamburger');
+      
+      navLinks.classList.toggle('active');
+      
+      const isOpen = navLinks.classList.contains('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    }
+  </script>
+
+</body>
+</html>
