@@ -49,3 +49,53 @@ function toggleMenu() {
   navLinks.classList.toggle('active');
 }
 
+window.addEventListener("scroll", () => {
+
+  const scrollTop = document.documentElement.scrollTop;
+
+  const scrollHeight =
+  document.documentElement.scrollHeight -
+  document.documentElement.clientHeight;
+
+  const progress =
+  (scrollTop / scrollHeight) * 100;
+
+  document.getElementById("progressBar")
+          .style.width = progress + "%";
+});
+
+const reveals = document.querySelectorAll(
+'.featured-card,.stat-card'
+);
+
+window.addEventListener('scroll',()=>{
+
+ reveals.forEach(card=>{
+
+   const top = card.getBoundingClientRect().top;
+
+   if(top < window.innerHeight - 100){
+      card.classList.add('active');
+   }
+
+ });
+
+});
+
+window.addEventListener("scroll",()=>{
+
+ const winScroll =
+ document.documentElement.scrollTop;
+
+ const height =
+ document.documentElement.scrollHeight -
+ document.documentElement.clientHeight;
+
+ const scrolled =
+ (winScroll / height) * 100;
+
+ document.getElementById(
+ "scrollProgress"
+ ).style.width = scrolled + "%";
+
+});
