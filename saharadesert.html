@@ -1,115 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life in the Extreme - The Sahara Desert</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience camel treks across Erg Chebbi dunes, luxury Berber desert camps, and stargazing in the Sahara Desert with Explore Africa.">
+  <title>Sahara Desert Expeditions | Explore Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="header-title-container">
-            <i class="fa-solid fa-paw header-icon"></i>
-            <h1>Life in the Extreme</h1>
-        </div>
-    </header>
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
 
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
 
-    <section class="hero-video">
-         <h2>Wildlife of the Sahara</h2>
-            <p>Experience the beauty and resilience of desert wildlife.</p>
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="morocco.html">Morocco</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <iframe
-        src="https://www.youtube.com/embed/OfahTNFsu_U?autoplay=1&mute=1&loop=1&playlist=OfahTNFsu_U&controls=0&showinfo=0&rel=0"
-        title="Wildlife Documentary"
-        allow="autoplay; encrypted-media; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-</section>
-
-    <div class="container">
-        
-        <a href="index.html" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i> Back to Main Guide
-        </a>
-
-        <section class="intro-card">
-            <h2>Sahara's Resilient Ecosystem</h2>
-            <p>Despite the incredibly harsh conditions, scorching temperatures, and bone-dry terrain, the Sahara Desert is home to a rich variety of highly resilient flora and fauna. These organisms haven't just survived; they have uniquely evolved over millennia to master the art of thriving under the blistering sun and going weeks—sometimes months—without a drop of water.</p>
-        </section>
-
-        <div class="wildlife-grid">
-            
-            <!-- Dromedary Camel -->
-            <div class="species-card">
-                <div class="species-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=600&q=80" alt="Dromedary Camel in the desert" class="species-image">
-                </div>
-                <div class="species-content">
-                    <div class="species-header">
-                        <i class="fa-solid fa-camel species-icon"></i>
-                        <h3 class="species-title">Dromedary Camel</h3>
-                    </div>
-                    <div class="adaptation-tag">Adaptation: Fat Storage & Water Conservation</div>
-                    <p>Often referenced as the "Ship of the Desert," the single-humped Dromedary camel stores up to 80 pounds of fat in its hump rather than across its body, minimizing heat trapping. They can lose up to 30% of their body weight in water without facing dehydration and can rehydrate by drinking over 30 gallons in under 10 minutes.</p>
-                </div>
-            </div>
-
-            <!-- Fennec Fox -->
-            <div class="species-card">
-                <div class="species-image-wrapper">
-                    <img src="imagas/fox.jpeg" alt="Fennec Fox with large ears" class="species-image">
-                </div>
-                <div class="species-content">
-                    <div class="species-header">
-                        <i class="fa-solid fa-dog species-icon"></i>
-                        <h3 class="species-title">Fennec Fox</h3>
-                    </div>
-                    <div class="adaptation-tag">Adaptation: Oversized Ears & Nocturnal Habits</div>
-                    <p>The tiny Fennec fox sports iconic, massively oversized ears that act like organic radiators, dissipating body heat away into the desert air to keep its body cool. Furthermore, their thick sandy-colored fur protects them from nighttime temperature drops and burns, while furry paws shield them from hot sand.</p>
-                </div>
-            </div>
-
-            <!-- Dorcas Gazelle -->
-            <div class="species-card">
-                <div class="species-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=600&q=80" alt="Dorcas Gazelle" class="species-image">
-                </div>
-                <div class="species-content">
-                    <div class="species-header">
-                        <i class="fa-solid fa-bolt species-icon"></i>
-                        <h3 class="species-title">Dorcas Gazelle</h3>
-                    </div>
-                    <div class="adaptation-tag">Adaptation: Hydration from Vegetation</div>
-                    <p>The beautiful Dorcas gazelle is spectacularly adapted to never require drinking liquid water at all. They are able to extract every ounce of necessary hydration completely from the moisture locked inside the leaves, acacia pods, and succulents they consume.</p>
-                </div>
-            </div>
-
-            <!-- Deathstalker Scorpion -->
-            <div class="species-card">
-                <div class="species-image-wrapper">
-                    <img src="imagas/scorpion.jpeg" alt="Scorpion in the sand" class="species-image">
-                </div>
-                <div class="species-content">
-                    <div class="species-header">
-                        <i class="fa-solid fa-bug species-icon"></i>
-                        <h3 class="species-title">Deathstalker Scorpion</h3>
-                    </div>
-                    <div class="adaptation-tag">Adaptation: Metabolic Suppression & Burrowing</div>
-                    <p>The lethal Deathstalker scorpion survives by burying itself deep beneath the cooler, sub-surface layers of sand during peak heat hours. They possess a highly repressed metabolic rate, allowing them to survive on just a handful of small insects per year if resources grow scarce.</p>
-                </div>
-            </div>
-
-        </div>
-
+  <!-- PAGE HERO BANNER -->
+  <section class="page-hero" aria-label="Sahara Desert banner" style="background: linear-gradient(rgba(18, 35, 50, 0.58), rgba(18, 35, 50, 0.76)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+    <div class="hero-content">
+      <span class="subheading" style="color: var(--color-gold);">North Africa Expedition</span>
+      <h1>The Sahara Desert</h1>
+      <p>Cross towering golden dunes by camel at sunset, share Berber hospitality around a desert campfire, and sleep beneath the Milky Way.</p>
+      <a href="#sahara-content" class="btn">Explore the Dunes</a>
     </div>
+  </section>
 
-    <footer>
-        <p>Explore the World | Life in the Extreme Wildlife Guide</p>
-    </footer>
+  <!-- QUICK FACTS BAR -->
+  <section class="trip-stats" aria-label="Sahara Desert facts">
+    <div class="stat">
+      <h3>9.2M km²</h3>
+      <span>Vast Desert Span</span>
+    </div>
+    <div class="stat">
+      <h3>150m+</h3>
+      <span>Erg Chebbi Dunes</span>
+    </div>
+    <div class="stat">
+      <h3>Zero</h3>
+      <span>Light Pollution</span>
+    </div>
+    <div class="stat">
+      <h3>Oct – Apr</h3>
+      <span>Best Trekking Months</span>
+    </div>
+  </section>
 
-</body>
-</html>
+  <!-- MAIN CONTENT -->
+  <main id="sahara-content">
+
+    <!-- EDITORIAL INTRO -->
+    <section class="about-preview">
+      <div class="container layout-split">
+        <div class="text-content">
+          <h2>Silence Written in Sand</h2>
+          <p>
+            Stretching across North Africa, the Sahara is the world’s largest hot desert—a mesmerizing landscape of wind-sculpted ergs, rocky plateaus, and hidden date-palm oases.
+          </p>
+          <p>
+            Whether riding into the sunset from Merzouga or trekking deep into the wild dunes of Erg Chigaga, a night in the Sahara transforms how you experience stillness and scale.
+          </p>
+        </div>
+        <figure class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?auto=format&fit=crop&w=900&q=80" alt="Golden sand dunes of the Sahara Desert at twilight" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- SIGNATURE DESERT EXPERIENCES -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <header class="section-header">
+          <h2>Signature Sahara Experiences</h2>
+          <span class="subheading">Dunes, Camps &amp; Nomadic Heritage</span>
+        </header>
+
+        <div class="experience-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Sunset camel caravan across Sahara sand dunes" loading="lazy">
+            <div class="card-body">
+              <h3>Sunset Camel Treks</h3>
+              <p>Follow experienced Amazigh guides atop dromedary camels as shifting afternoon light turns the dunes deep amber and crimson.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/146267918.jpg?k=a2e7991ad098cdd270cd36d6e0b96e6572fb86adb955b775bd0adb7f8eb6aa7d&o=" alt="Luxury woven desert camp tents" loading="lazy">
+            <div class="card-body">
+              <h3>Berber Desert Camps</h3>
+              <p>Stay in traditional hand-woven wool tents equipped with plush bedding, private en-suite comforts, and lantern-lit dining.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?auto=format&fit=crop&w=800&q=80" alt="Star-filled night sky over desert dunes" loading="lazy">
+            <div class="card-body">
+              <h3>Stargazing &amp; Campfire Music</h3>
+              <p>Gather around crackling cedar fires for live Berber drumming and storytelling beneath unobstructed constellations.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://ems2.imgix.net/78b0e3be87/off-the-grid-guide-atlas-mountains0.jpg?ixlib=js-2.3.2&auto=format&q=100&w=584&h=369&fit=crop&s=7455108f2f53e4322a56c9d389c14bc1" alt="4x4 overland expedition across desert tracks" loading="lazy">
+            <div class="card-body">
+              <h3>4x4 Oasis Expeditions</h3>
+              <p>Venture off-road to visit nomadic family tents, fossil beds, and lush palm oases fed by ancient underground aqueducts.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESERT WILDLIFE & ADAPTATIONS (USES

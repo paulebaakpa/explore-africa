@@ -2,35 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>South Africa | Explore Africa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover South Africa's Big Five safaris, Cape Town, and stunning coastal landscapes with Explore Africa.">
+  <title>South Africa Adventures | Explore Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <nav>
-    <h2>Explore Africa</h2>
-    <a href="menu.html" class="hamburger">☰</a>
-  </nav>
-</header>
+  <!-- HEADER NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
+      
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+      
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="southafrica.html" class="active">South Africa</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="page-hero" style="background-image: url('https://explore-botswana.com/wp-content/uploads/2024/07/Self-Drive-Safari-4x4-Car-Hire-Route-Highlights-Botswana-03.webp');">
-  <h1>South Africa</h1>
-</section>
+  <!-- PAGE HERO BANNER -->
+  <section class="page-hero" aria-label="South Africa banner" style="background: linear-gradient(rgba(18, 35, 50, 0.65), rgba(18, 35, 50, 0.75)), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+    <div class="hero-content">
+      <span class="subheading" style="color: var(--color-gold);">Southern Africa Destination</span>
+      <h1>Discover South Africa</h1>
+      <p>From thrilling Big Five safaris in Kruger National Park to the breathtaking peaks of Table Mountain and historic wine estates.</p>
+      <a href="#sa-content" class="btn">Start Exploring</a>
+    </div>
+  </section>
 
-<section class="content">
-  <h2>Cape Town</h2>
-  <p>Explore Table Mountain, beaches, and city life.</p>
+  <!-- QUICK FACTS BAR -->
+  <section class="trip-stats" aria-label="South Africa quick facts">
+    <div class="stat">
+      <h3>Capitals</h3>
+      <span>Pretoria, Cape Town, Bloemfontein</span>
+    </div>
+    <div class="stat">
+      <h3>Languages</h3>
+      <span>11 Official Languages</span>
+    </div>
+    <div class="stat">
+      <h3>Currency</h3>
+      <span>South African Rand (ZAR)</span>
+    </div>
+    <div class="stat">
+      <h3>Best Season</h3>
+      <span>May – September (Safari)</span>
+    </div>
+  </section>
 
-  <h2>Wildlife & Safari</h2>
-  <p>Kruger National Park offers an unforgettable safari experience.</p>
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="sa-content">
 
-  <h2>Travel Tips</h2>
-  <p>Best season to visit, transport options, and local highlights.</p>
-</section>
+    <!-- EDITORIAL INTRO BOX -->
+    <section class="section-padding">
+      <div class="container" style="max-width: var(--container-narrow);">
+        <div style="background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 3rem; border: 1px solid var(--color-border);">
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-bottom: 1rem;">The Rainbow Nation</h2>
+          <p style="font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.8;">
+            South Africa offers one of the most diverse travel experiences on earth. Whether you are tracking lions on an open-air 4x4 safari vehicle at sunrise or tasting world-class vintages in Stellenbosch, every mile brings a new wonder.
+          </p>
+          <div style="background: #fcf8f2; border-left: 4px solid var(--color-accent); padding: 1.25rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 1.5rem;">
+            <p style="margin: 0; font-style: italic; color: var(--color-earth);">“A land of striking contrasts, where wild wilderness meets cosmopolitan coastal cities.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a href="index.html" class="btn" style="margin: 40px auto; display: block; text-align: center;">Back to Home</a>
+    <!-- HIGHLIGHTS GRID -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <header class="section-header">
+          <h2>Top South African Experiences</h2>
+          <span class="subheading">Wildlife, Coastlines & Culture</span>
+        </header>
 
+        <div class="experience-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=800&q=80" alt="Elephant in Kruger National Park" loading="lazy">
+            <div class="card-body">
+              <h3 style="color: var(--color-primary);">Kruger National Park</h3>
+              <p>Experience premier game viewing across nearly 2 million hectares of untamed African bushveld.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Cape Town and Table Mountain" loading="lazy">
+            <div class="card-body">
+              <h3 style="color: var(--color-primary);">Cape Town & Peninsula</h3>
+              <p>Take cable cars up Table Mountain, visit the penguins at Boulders Beach, and tour Cape Point.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Garden Route coastal scenery" loading="lazy">
+            <div class="card-body">
+              <h3 style="color: var(--color-primary);">The Garden Route</h3>
+              <p>Drive along lush coastal forests, dramatic cliffs, tranquil lagoons, and hidden beaches.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Vineyards in South Africa" loading="lazy">
+            <div class="card-body">
+              <h3 style="color: var(--color-primary);">Winelands & Cuisine</h3>
+              <p>Savor culinary masterpieces paired with award-winning wines in historic Cape Dutch estates.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED EDITORIAL SECTION -->
+    <section class="section-padding">
+      <div class="container" style="max-width: var(--container-narrow); background: var(--color-surface); padding: 3.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
+        
+        <h2>Planning Your South African Safari</h2>
+        <p>
+          Visiting South Africa for a wildlife safari is often a once-in-a-lifetime journey. Whether you choose a private luxury lodge in Sabi Sands or a self-drive adventure through Kruger National Park, preparation is key. Game reserves are malaria-free in certain regions (like Madikwe or parts of the Eastern Cape), while Kruger requires basic preventative measures during warmer months.
+        </p>
+
+        <div class="day-list" style="margin: 2rem 0;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.75rem;">Safari Essentials Checklist</h4>
+          <ul>
+            <li><strong>Clothing:</strong> Neutral earth tones (khaki, beige, olive) for game drives; warm layers for crisp morning departures.</li>
+            <li><strong>Optics:</strong> High-quality binoculars and a zoom lens camera for wildlife photography.</li>
+            <li><strong>Etiquette:</strong> Respect local guides, maintain safe distances from wild animals, and support community-led conservation initiatives.</li>
+          </ul>
+        </div>
+
+        <h2>Best Time to Visit</h2>
+        <p>
+          For wildlife viewing in Kruger and the northern reserves, the dry winter months from **May to September** offer sparse foliage and animals gathering around watering holes, making sightings much easier. For whale watching along the Western Cape and enjoying Cape Town’s sunny summer, **November to March** is ideal.
+        </p>
+
+        <!-- SOCIAL SHARE AREA -->
+        <div class="social-icons" style="margin: 3rem 0; box-shadow: none;">
+          <h3>Sharing is Caring! Connect With Us</h3>
+          <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- BACK TO HOME BUTTON -->
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="index.html" class="btn btn-secondary">&larr; Back to Home</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Explore Africa</h3>
+        <p>Discover breathtaking destinations across Kenya, Morocco, and South Africa. Travel. Experience. Remember.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="legal.html">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="newsletter" action="#" method="POST">
+          <label for="newsletter-email" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+    }
+  </script>
 </body>
 </html>

@@ -2,72 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Destinations | Explore Africa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore handpicked African destinations across Morocco, Kenya, South Africa, and the Sahara Desert.">
+  <title>Destinations | Explore Africa</title>
+  <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="destinations-page">
+<body>
 
-<header>
-  <nav>
-    <h2>Explore Africa</h2>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="culture.html">Culture</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
 
-<section class="page-hero">
-  <div class="hero-content">
-    <h1>Discover Africa</h1>
-    <p>
-      From the golden dunes of Morocco to the wildlife-rich plains of Kenya
-      and the dramatic coastlines of South Africa.
-    </p>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
 
-    <a href="#destinations" class="hero-btn">
-      Explore Destinations
-    </a>
-  </div>
-</section>
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="cards">
-  <h2 style="text-align:center; margin-bottom:30px;">Explore Africa</h2>
-  <p style="text-align:center; max-width:600px; margin:0 auto 40px;">
-    Click on any destination card to learn more about it.
-  </p>
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Destinations banner">
+    <div class="hero-content">
+      <span class="subheading" style="color: var(--color-gold);">Curated Journeys</span>
+      <h1>Explore African Destinations</h1>
+      <p>Filter by region or travel style to plan your next unforgettable expedition across the continent.</p>
+    </div>
+  </section>
 
-  <div class="featured-grid">
-    <a href="kenya.html" class="featured-card"
-       style="background-image: url('https://explore-botswana.com/wp-content/uploads/2024/07/Self-Drive-Safari-4x4-Car-Hire-Route-Highlights-Botswana-Victoria-Falls-pic2.webp');">
-      <div class="card-overlay">
-        <h3>Kenya Safari</h3>
-        <p>Witness wildlife in the Maasai Mara.</p>
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="section-padding">
+    <div class="container">
+
+      <!-- FILTER BAR & SEARCH -->
+      <div class="filter-controls">
+        <div class="search-box">
+          <label for="destination-search" class="visually-hidden">Search destinations</label>
+          <input type="search" id="destination-search" placeholder="Search Morocco, Kenya, Safari, Sahara...">
+        </div>
+
+        <div class="filter-pills" role="group" aria-label="Filter destinations by region or style">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Destinations</button>
+          <button type="button" class="filter-btn" data-filter="north-africa" aria-pressed="false">North Africa</button>
+          <button type="button" class="filter-btn" data-filter="east-africa" aria-pressed="false">East Africa</button>
+          <button type="button" class="filter-btn" data-filter="southern-africa" aria-pressed="false">Southern Africa</button>
+          <button type="button" class="filter-btn" data-filter="safari" aria-pressed="false">Safari & Wildlife</button>
+          <button type="button" class="filter-btn" data-filter="culture" aria-pressed="false">Culture & Heritage</button>
+        </div>
       </div>
-    </a>
 
-    <a href="morocco.html" class="featured-card"
-       style="background-image: url('https://explore-botswana.com/wp-content/uploads/2024/07/Self-Drive-Safari-4x4-Car-Hire-Route-Highlights-Botswana-Victoria-Falls-pic1.webp');">
-      <div class="card-overlay">
-        <h3>Morocco Adventures</h3>
-        <p>Explore Marrakech and the Sahara Desert.</p>
+      <!-- DESTINATION CARDS GRID -->
+      <div class="experience-grid">
+
+        <article class="card destination-card" data-category="north-africa culture">
+          <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80" alt="Marrakech Medina and Atlas Mountains" loading="lazy">
+          <div class="card-body">
+            <h3>Morocco</h3>
+            <p>Wander ancient medinas in Marrakech, trek the High Atlas Mountains, and experience vibrant souks.</p>
+            <a href="morocco.html" class="btn">Explore Morocco</a>
+          </div>
+        </article>
+
+        <article class="card destination-card" data-category="north-africa culture">
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Golden dunes of the Sahara Desert" loading="lazy">
+          <div class="card-body">
+            <h3>Sahara Desert</h3>
+            <p>Overnight camel treks, sweeping golden dunes, and luxury Berber desert camps under starry skies.</p>
+            <a href="saharadesert.html" class="btn">Explore Sahara</a>
+          </div>
+        </article>
+
+        <article class="card destination-card" data-category="east-africa safari">
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="Acacia trees and wildlife on the Kenyan savanna" loading="lazy">
+          <div class="card-body">
+            <h3>Kenya</h3>
+            <p>Witness the Great Migration in the Maasai Mara and immerse yourself in East African wildlife safaris.</p>
+            <a href="kenya.html" class="btn">Explore Kenya</a>
+          </div>
+        </article>
+
+        <article class="card destination-card" data-category="southern-africa safari culture">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Safari wildlife in South Africa" loading="lazy">
+          <div class="card-body">
+            <h3>South Africa</h3>
+            <p>Big Five game drives in Kruger National Park paired with Cape Town's dramatic coastline and vineyards.</p>
+            <a href="southafrica.html" class="btn">Explore South Africa</a>
+          </div>
+        </article>
+
       </div>
-    </a>
 
-    <a href="southafrica.html" class="featured-card"
-       style="background-image: url('https://explore-botswana.com/wp-content/uploads/2024/07/Self-Drive-Safari-4x4-Car-Hire-Route-Highlights-Botswana-03.webp');">
-      <div class="card-overlay">
-        <h3>South Africa</h3>
-        <p>Discover Cape Town & Table Mountain.</p>
+      <!-- EMPTY STATE MESSAGE -->
+      <p id="no-results-message" class="no-results" hidden>
+        No destinations match your current filter. Try selecting "All Destinations" or clearing your search.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Explore Africa</h3>
+        <p>Discover breathtaking destinations across Kenya, Morocco, and South Africa. Travel. Experience. Remember.</p>
       </div>
-    </a>
-  </div>
-</section>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="legal.html">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="newsletter" action="#" method="POST">
+          <label for="newsletter-email" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+    }
+  </script>
+  <script src="filter.js"></script>
 </body>
 </html>

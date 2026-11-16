@@ -3,258 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover ancient medinas, Sahara desert treks, and rich cultural history in Morocco with Explore Africa.">
   <title>Morocco Adventures | Explore Africa</title>
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="style.css">
-  
-   
 </head>
 <body>
 
   <!-- HEADER NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Morocco Travel</div>
-      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="morocco.html">Home</a></li>
-        <li><a href="travelmorocco.html">Travel Morocco</a></li>
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
+      
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+      
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="morocco.html" class="active">Morocco</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- GRAPHIC HERO PAGE TOP Banner -->
-  <section class="page-hero">
-  <div class="hero-overlay">
-    <span class="hero-tag">North Africa Destination</span>
-
-    <h1>Discover Morocco</h1>
-
-    <p>
-      Wander ancient medinas, trek across the Sahara Desert,
-      and experience centuries of culture and history.
-    </p>
-
-    <a href="#explore" class="hero-btn">
-      Start Exploring
-    </a>
-  </div>
-</section>
-
-
-<section class="quick-facts">
-
-  <div class="fact-card">
-    <h3>Capital</h3>
-    <p>Rabat</p>
-  </div>
-
-  <div class="fact-card">
-    <h3>Language</h3>
-    <p>Arabic & Berber</p>
-  </div>
-
-  <div class="fact-card">
-    <h3>Currency</h3>
-    <p>Moroccan Dirham</p>
-  </div>
-
-  <div class="fact-card">
-    <h3>Best Season</h3>
-    <p>Spring & Autumn</p>
-  </div>
-
-</section>
-
-  <!-- EDITORIAL INTRO BOX -->
-  <section class="morocco-intro">
-    <h2>Marrakech</h2>
-    <ul>
-      <li>Marrakech Markets</li>
-      <li>What to Buy</li>
-    </ul>
-    <p>Explore the vibrant markets, gardens, and local cuisine.</p>
-    <div class="quote-box" style="max-width: 600px; margin: 15px auto 0;">
-      <p>Remember, this part of the city is not just for tourists.</p>
+  <!-- GRAPHIC HERO PAGE TOP BANNER -->
+  <section class="page-hero" aria-label="Morocco banner">
+    <div class="hero-content">
+      <span class="subheading" style="color: var(--color-gold);">North Africa Destination</span>
+      <h1>Discover Morocco</h1>
+      <p>Wander ancient medinas, trek across the Sahara Desert, and experience centuries of culture and history.</p>
+      <a href="#explore-content" class="btn">Start Exploring</a>
     </div>
   </section>
 
-  <div class="image-showcase">
-   <img src="imagas/MarrakechMarketExperience.jpeg" alt="Marrakech Market Experience">
-   <div class="image-caption">
-      Marrakech Market Experience
-   </div>
-</div>
+  <!-- QUICK FACTS BAR -->
+  <section class="trip-stats" aria-label="Morocco quick facts">
+    <div class="stat">
+      <h3>Capital</h3>
+      <span>Rabat</span>
+    </div>
+    <div class="stat">
+      <h3>Language</h3>
+      <span>Arabic & Berber</span>
+    </div>
+    <div class="stat">
+      <h3>Currency</h3>
+      <span>Moroccan Dirham</span>
+    </div>
+    <div class="stat">
+      <h3>Best Season</h3>
+      <span>Spring & Autumn</span>
+    </div>
+  </section>
 
-<section class="reasons-grid">
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="explore-content">
 
-  <div class="reason-card">
-     <h3>🏜 Sahara Desert</h3>
-     <p>Ride camels across endless dunes.</p>
-  </div>
-
-  <div class="reason-card">
-     <h3>🏛 Historic Cities</h3>
-     <p>Explore ancient medinas and palaces.</p>
-  </div>
-
-  <div class="reason-card">
-     <h3>⛰ Atlas Mountains</h3>
-     <p>Perfect for trekking and adventure.</p>
-  </div>
-
-  <div class="reason-card">
-     <h3>🍵 Local Cuisine</h3>
-     <p>Enjoy tagines, couscous and mint tea.</p>
-  </div>
-
-</section>
-
-  <!-- MAIN STORIES LAYOUT SECTION -->
-  <section class="morocco-content">
-    <div class="container">
-
-      <p>
-        It is also where people live, work, and go to school. Ask yourself: if you were on the other side of the camera, what would you want to happen?<br><br>
-        Winding off of the main streets where goods are for sale are smaller residential streets called <i>derbs</i>. Mixed into the workshops and homes are restaurants, food shops, and street vendors. There truly is a little bit of everything. There’s even more happening that goes completely beyond what you will see from the main street layout of the famous market in Marrakech.
-      </p>
-
-      <div class="quote-box">
-        <p>But what if I get lost in the medina?</p>
-        <span style="color: #444; font-weight: 500;">The question isn’t if you get lost, the question is how soon you’ll get lost.</span>
-      </div>
-
-      <p>
-        It took me over a year to finally get my bearings and learn how to navigate the streets of the souk. For first-time visitors, it’s completely inevitable. Go into the experience knowing you’re likely to get lost and accept it as part of having a authentic Marrakech experience! Don’t panic if ever you find yourself getting lost in the Marrakech night market. You’ll find signs scattered through the souks with arrows pointing directly to Jemaa el-Fnaa, so if you want to exit, just follow the signs or ask a vendor to point you in the right direction.
-      </p>
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHDdJMaBC0pVXjiHYyDpLGX8cgYCu1WsFXX5qeN99JfS52TBQ7dbej51g&s=10" alt="Vibrant Marrakech Market Display">
-
-      <h2>Camping and RV'ing in Morocco</h2>
-      <p>Finding electrical plug-ins and water hookups may prove to be the most difficult challenge. Outside of a dedicated campground, you likely won’t find exterior hookups. It’s however not uncommon to see campers parked overnight in public parking lots. If you need to wash laundry, there aren’t self-service Laundromats, however, you can take your clothes to be washed at a local laundry service for a relatively small fee.</p>
-      
-      <p>
-        Towering kasbahs, luxurious riad gardens, and sumptuous hotel rooms are all a part of the traveler's imagination when it comes to Morocco. However, for those who prefer something a little less expensive and closer to nature, camping and RVing sound closer to their dreams. Morocco is not as infrastructure-friendly for camping as the United States or Europe, however, there are more and more locations catering to visitors who prefer sleeping under the stars.
-      </p>
-
-      <p>
-        Morocco has several stunning national parks like Al Hoceima National Park and Toubkal National Park. These are protected wildlife refuges and are perfect environments for climbing, hiking, and wilderness camping. You will want to take weather into consideration. Contrary to popular belief, not all of Morocco is warm and sunny year-round. Autumn and winter months can be quite cold, especially at higher elevations—remember, it does snow in the High Atlas Mountains. Further south, the Anti-Atlas mountains are more rocky and the opposite weather extreme needs to be monitored. It can become extremely hot as you approach the Sahara desert.
-      </p>
-
-      <img src="https://marocmama.com/wp-content/uploads/2014/10/Retro-Camper.jpg" alt="Retro Camper Bus parked in Morocco countryside">
-      
-      <section class="history-timeline">
-
-<div class="timeline-card">
-  <h3>Ancient Berber Era</h3>
-  <p>Indigenous cultures shaped Morocco's foundations.</p>
-</div>
-
-<div class="timeline-card">
-  <h3>Roman Influence</h3>
-  <p>Trade and settlement expanded along the coast.</p>
-</div>
-
-<div class="timeline-card">
-  <h3>Islamic Dynasties</h3>
-  <p>Architecture and culture flourished.</p>
-</div>
-
-<div class="timeline-card">
-  <h3>Modern Morocco</h3>
-  <p>Independence achieved in 1956.</p>
-</div>
-
-</section>
-
-
-      <h3>Wildlife to Worry About</h3>
-      <p>Morocco does have scorpions and snakes. In rural wilderness areas, wild boars and monkeys are also worth keeping in mind. Tent camping proves a little more troublesome when keeping these creatures out. Make sure to keep your food completely sealed and put away. Pick up and get rid of all garbage, especially before nightfall. Scorpions are found in the warmer desert zones; when nights get cold they look for warm places to curl up, so it’s highly recommended to shake out your sleeping bag before going to bed and storing your bedding rolled up during the day.</p>
-      
-      <p style="font-style: italic; font-weight: bold; text-align: center; margin: 40px 0 10px;">
-        Have you camped in Morocco? I’d love to hear about your experience!
-      </p>
-
-      <!-- SOCIAL SHARE AREA -->
-      <section class="social-icons">
-        <h2>Sharing is Caring! Connect With Us</h2>
-        <div class="icons">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    <!-- EDITORIAL INTRO BOX -->
+    <section class="morocco-intro section-padding">
+      <div class="container" style="max-width: var(--container-narrow);">
+        <div class="card-body" style="background: var(--color-surface); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 3rem; border: 1px solid var(--color-border);">
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-bottom: 1rem;">Marrakech</h2>
+          <p style="font-size: 1.1rem; color: var(--color-text-muted);">Explore the vibrant markets, gardens, and local cuisine.</p>
+          <div style="background: #fcf8f2; border-left: 4px solid var(--color-accent); padding: 1.25rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 1.5rem;">
+            <p style="margin: 0; font-style: italic; color: var(--color-earth);">“Remember, this part of the city is not just for tourists.”</p>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- BOTTOM GRID DESTINATIONS LINKS -->
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Sahara Desert</h3>
-          <p>Overnight camel treks, sweeping dunes, and stunning desert landscapes under pristine starry night skies.</p>
-          <a href="saharadesert.html" class="card-link">Explore Desert Tours</a>
-        </article>
+    <!-- IMAGE SHOWCASE -->
+    <section class="container" style="margin-bottom: 3rem;">
+      <div class="img-wrapper">
+        <img src="imagas/MarrakechMarketExperience.jpeg" alt="Marrakech Market Experience" loading="lazy" style="height: 420px; object-fit: cover;">
+        <div style="text-align: center; margin-top: 0.75rem; font-style: italic; color: var(--color-text-muted); font-size: 0.95rem;">
+          Marrakech Market Experience
+        </div>
+      </div>
+    </section>
 
-        <article class="feature-card">
-          <h3>Travel Tips</h3>
-          <p>Discover the best times to visit, local cultural etiquette guidelines, and effortless transport methods.</p>
-          <a href="morocco-itineraries.html" class="card-link">View Itineraries</a>
-        </article>
-        <h2>Rich Historical Tapestry</h2>
-        <strong>Ancient Roots</strong>
-        <p>Morocco’s history is a fascinating blend of civilizations:</p>
-        <ul>
-          <li><strong>Berber Origins:</strong> Indigenous populations dating back thousands of years</li>
-          <li><strong>Roman Influence: </strong> Coastal settlements and trading posts</li>
-          <li><strong>Islamic Dynasties:</strong> Profound cultural and architectural transformations</li>
-          <li><strong>European Colonization:</strong> French and Spanish influences</li>
-          <li><strong>Independence:</strong> Achieved in 1956, marking a new era of national identity</li>
-        </ul><br>
+    <!-- REASONS GRID -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <header class="section-header">
+          <h2>Why Visit Morocco</h2>
+          <span class="subheading">Highlights & Adventures</span>
+        </header>
 
-        <h2>Cultural Music</h2>
-        <strong>A Blend of Influences</strong>
-        <p>Morocco represents a unique cultural fusion:</p>
-        <ul>
-          <li><strong>Languages:</strong>Arabic, Berber, French</li>
-          <li><strong>Religion:</strong>Predominantly Islam, with a rich spiritual tradition</li>
-          <li><strong>Arts:</strong>Intricate music, vibrant visual arts, and literary heritage</li>
-        </ul><br>
+        <div class="experience-grid">
+          <article class="card">
+            <div class="card-body">
+              <h3 style="color: var(--color-terracotta);">🏜 Sahara Desert</h3>
+              <p>Ride camels across endless dunes under pristine starry night skies.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <h3 style="color: var(--color-terracotta);">🏛 Historic Cities</h3>
+              <p>Explore ancient medinas, colorful souks, and historic royal palaces.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <h3 style="color: var(--color-terracotta);">⛰ Atlas Mountains</h3>
+              <p>Rugged peaks and Berber villages perfect for trekking and adventure.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <h3 style="color: var(--color-terracotta);">🍵 Local Cuisine</h3>
+              <p>Enjoy savory tagines, aromatic couscous, and traditional mint tea.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <h2>Culinary Delights</h2>
-        <p>Moroccan cuisine reflects its diverse cultural influences:</p>
+    <!-- MAIN STORIES & EDITORIAL SECTION -->
+    <section class="morocco-content section-padding">
+      <div class="container" style="max-width: var(--container-narrow); background: var(--color-surface); padding: 3.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
+        
+        <p>
+          It is also where people live, work, and go to school. Ask yourself: if you were on the other side of the camera, what would you want to happen?<br><br>
+          Winding off of the main streets where goods are for sale are smaller residential streets called <i>derbs</i>. Mixed into the workshops and homes are restaurants, food shops, and street vendors. There truly is a little bit of everything. There’s even more happening that goes completely beyond what you will see from the main street layout of the famous market in Marrakech.
+        </p>
+
+        <div style="background-color: #fcf8f2; border-left: 4px solid var(--color-accent); padding: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 2rem 0;">
+          <p style="margin: 0 0 0.5rem 0; font-weight: bold; color: var(--color-primary);">But what if I get lost in the medina?</p>
+          <span style="color: var(--color-text-muted); font-size: 0.95rem;">The question isn’t if you get lost, the question is how soon you’ll get lost.</span>
+        </div>
+
+        <p>
+          It took me over a year to finally get my bearings and learn how to navigate the streets of the souk. For first-time visitors, it’s completely inevitable. Go into the experience knowing you’re likely to get lost and accept it as part of having an authentic Marrakech experience! Don’t panic if ever you find yourself getting lost in the Marrakech night market. You’ll find signs scattered through the souks with arrows pointing directly to Jemaa el-Fnaa, so if you want to exit, just follow the signs or ask a vendor to point you in the right direction.
+        </p>
+
+        <div class="img-wrapper" style="margin: 2.5rem 0;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHDdJMaBC0pVXjiHYyDpLGX8cgYCu1WsFXX5qeN99JfS52TBQ7dbej51g&s=10" alt="Vibrant Marrakech Market Display" loading="lazy">
+        </div>
+
+        <h2>Camping and RV'ing in Morocco</h2>
+        <p>Finding electrical plug-ins and water hookups may prove to be the most difficult challenge. Outside of a dedicated campground, you likely won’t find exterior hookups. It’s however not uncommon to see campers parked overnight in public parking lots. If you need to wash laundry, there aren’t self-service laundromats, however, you can take your clothes to be washed at a local laundry service for a relatively small fee.</p>
+        
+        <p>
+          Towering kasbahs, luxurious riad gardens, and sumptuous hotel rooms are all a part of the traveler's imagination when it comes to Morocco. However, for those who prefer something a little less expensive and closer to nature, camping and RVing sound closer to their dreams. Morocco is not as infrastructure-friendly for camping as the United States or Europe, however, there are more and more locations catering to visitors who prefer sleeping under the stars.
+        </p>
+
+        <p>
+          Morocco has several stunning national parks like Al Hoceima National Park and Toubkal National Park. These are protected wildlife refuges and are perfect environments for climbing, hiking, and wilderness camping. You will want to take weather into consideration. Contrary to popular belief, not all of Morocco is warm and sunny year-round. Autumn and winter months can be quite cold, especially at higher elevations—remember, it does snow in the High Atlas Mountains. Further south, the Anti-Atlas mountains are more rocky and the opposite weather extreme needs to be monitored. It can become extremely hot as you approach the Sahara desert.
+        </p>
+
+        <div class="img-wrapper" style="margin: 2.5rem 0;">
+          <img src="https://marocmama.com/wp-content/uploads/2014/10/Retro-Camper.jpg" alt="Retro Camper Bus parked in Morocco countryside" loading="lazy">
+        </div>
+        
+        <!-- HISTORY TIMELINE -->
+        <div style="margin: 3rem 0;">
+          <h3 style="color: var(--color-primary); margin-bottom: 1.25rem;">Historical Timeline</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div style="background: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent);">
+              <h4 style="font-size: 1rem; margin-bottom: 0.3rem; color: var(--color-earth);">Ancient Berber Era</h4>
+              <p style="font-size: 0.9rem; margin: 0; color: var(--color-text-muted);">Indigenous cultures shaped Morocco's foundations.</p>
+            </div>
+            <div style="background: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent);">
+              <h4 style="font-size: 1rem; margin-bottom: 0.3rem; color: var(--color-earth);">Roman Influence</h4>
+              <p style="font-size: 0.9rem; margin: 0; color: var(--color-text-muted);">Trade and settlement expanded along the coast.</p>
+            </div>
+            <div style="background: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent);">
+              <h4 style="font-size: 1rem; margin-bottom: 0.3rem; color: var(--color-earth);">Islamic Dynasties</h4>
+              <p style="font-size: 0.9rem; margin: 0; color: var(--color-text-muted);">Architecture and culture flourished.</p>
+            </div>
+            <div style="background: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-sm); border-left: 3px solid var(--color-accent);">
+              <h4 style="font-size: 1rem; margin-bottom: 0.3rem; color: var(--color-earth);">Modern Morocco</h4>
+              <p style="font-size: 0.9rem; margin: 0; color: var(--color-text-muted);">Independence achieved in 1956.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--color-primary); margin-top: 2.5rem;">Wildlife to Worry About</h3>
+        <p>Morocco does have scorpions and snakes. In rural wilderness areas, wild boars and monkeys are also worth keeping in mind. Tent camping proves a little more troublesome when keeping these creatures out. Make sure to keep your food completely sealed and put away. Pick up and get rid of all garbage, especially before nightfall. Scorpions are found in the warmer desert zones; when nights get cold they look for warm places to curl up, so it’s highly recommended to shake out your sleeping bag before going to bed and storing your bedding rolled up during the day.</p>
+        
+        <p style="font-style: italic; font-weight: bold; text-align: center; margin: 3rem 0 1rem; color: var(--color-terracotta);">
+          Have you camped in Morocco? I’d love to hear about your experience!
+        </p>
+
+        <!-- SOCIAL SHARE AREA -->
+        <div class="social-icons" style="margin: 3rem 0; box-shadow: none;">
+          <h3>Sharing is Caring! Connect With Us</h3>
+          <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- FEATURED DESTINATION CARDS -->
+        <div class="featured-grid" style="margin-top: 2rem;">
+          <a href="saharadesert.html" class="featured-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80');">
+            <div class="card-overlay">
+              <h3>Sahara Desert</h3>
+              <p>Overnight camel treks, sweeping dunes, and pristine starry night skies.</p>
+            </div>
+          </a>
+          <a href="morocco-itineraries.html" class="featured-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80');">
+            <div class="card-overlay">
+              <h3>Travel Tips</h3>
+              <p>Best times to visit, cultural etiquette guidelines, and transport methods.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- CULTURAL & HISTORICAL DETAILS -->
+        <div style="margin-top: 3rem;">
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px;">Rich Historical Tapestry</h2>
+          <p><strong>Ancient Roots:</strong> Morocco’s history is a fascinating blend of civilizations:</p>
+          <ul>
+            <li><strong>Berber Origins:</strong> Indigenous populations dating back thousands of years</li>
+            <li><strong>Roman Influence:</strong> Coastal settlements and trading posts</li>
+            <li><strong>Islamic Dynasties:</strong> Profound cultural and architectural transformations</li>
+            <li><strong>European Colonization:</strong> French and Spanish influences</li>
+            <li><strong>Independence:</strong> Achieved in 1956, marking a new era of national identity</li>
+          </ul>
+
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-top: 2rem;">Cultural Music & Arts</h2>
+          <p><strong>A Blend of Influences:</strong> Morocco represents a unique cultural fusion:</p>
+          <ul>
+            <li><strong>Languages:</strong> Arabic, Berber, French</li>
+            <li><strong>Religion:</strong> Predominantly Islam, with a rich spiritual tradition</li>
+            <li><strong>Arts:</strong> Intricate music, vibrant visual arts, and literary heritage</li>
+          </ul>
+
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-top: 2rem;">Culinary Delights</h2>
+          <p>Moroccan cuisine reflects its diverse cultural influences:</p>
+          <ul>
+            <li><strong>Signature Dishes:</strong> Tagine, couscous</li>
+            <li><strong>Beverages:</strong> Renowned mint tea ceremony</li>
+            <li><strong>Spices:</strong> Complex, aromatic flavor profiles</li>
+          </ul>
+
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-top: 2rem;">Economic Landscape</h2>
+          <p>Key Industries driving growth:</p>
+          <ul>
+            <li><strong>Tourism:</strong> A major economic driver</li>
+            <li><strong>Agriculture:</strong> Significant agricultural exports</li>
+            <li><strong>Phosphate Mining:</strong> Global leader in phosphate production</li>
+            <li><strong>Manufacturing:</strong> Growing industrial sector</li>
+          </ul>
+        </div>
+
+        <!-- BACK TO HOME BUTTON -->
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="index.html" class="btn btn-secondary">&larr; Back to Home</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Explore Africa</h3>
+        <p>Discover breathtaking destinations across Kenya, Morocco, and South Africa. Travel. Experience. Remember.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
         <ul>
-          <li><strong>Signature Dishes:</strong> Tagine, couscous</li>
-          <li><strong>Beverages:</strong> Renowned mint tea ceremony</li>
-          <li><strong>Spices:</strong> Complex, aromatic flavor profiles</li>
-        </ul><br>
-        <strong>Economic Landscape</strong>
-        <h2>Key Industries</h2>
-        <ul>
-          <li><strong>Tourism:</strong> A major economic driver</li>
-          <li><strong>Agriculture:</strong> Significant agricultural exports</li>
-          <li><strong>Phosphate Mining:</strong> Global leader in phosphate production</li>
-          <li><strong>Manufacturing:</strong> Growing industrial sector</li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      
-
-      <!-- LINK TO HOMEPAGE BAR -->
-      <div style="text-align: center;">
-        <a href="index.html" class="btn-home">Back to Home</a>
+      <div class="footer-section">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="legal.html">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
       </div>
-
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="newsletter" action="#" method="POST">
+          <label for="newsletter-email" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-submit">Join</button>
+        </form>
+      </div>
     </div>
-  </section>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-  <!-- MOBILE INTERACTION JAVASCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active");
+      const navLinks = document.getElementById('nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
     }
   </script>
- 
 </body>
 </html>
-
-```

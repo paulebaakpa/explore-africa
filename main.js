@@ -99,3 +99,72 @@ window.addEventListener("scroll",()=>{
  ).style.width = scrolled + "%";
 
 });
+
+
+/* ==========================================================================
+   EXPLORE AFRICA — GLOBAL JAVASCRIPT (main.js)
+   ========================================================================== */
+
+/**
+ * Toggles the mobile navigation drawer and updates ARIA expanded state.
+ */
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const hamburger = document.querySelector('.hamburger');
+  
+  if (navLinks && hamburger) {
+    navLinks.classList.toggle('active');
+    const isOpen = navLinks.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  }
+}
+
+// Make toggleMenu globally available for inline onclick handlers
+window.toggleMenu = toggleMenu;
+
+/**
+ * Automatically highlights the active navbar link based on the current page URL.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  navLinks.forEach((link) => {
+    const linkHref = link.getAttribute('href');
+    
+    // Remove active class from all links first
+    link.classList.remove('active');
+
+    // Match exact filename or root index
+    if (linkHref === currentPath || (currentPath === '' && linkHref === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+
+  // Close mobile menu when clicking outside or pressing escape key
+  document.addEventListener('click', (event) => {
+    const navLinksElement = document.getElementById('nav-links');
+    const hamburgerElement = document.querySelector('.hamburger');
+    
+    if (navLinksElement && hamburgerElement) {
+      const isClickInsideNav = navLinksElement.contains(event.target) || hamburgerElement.contains(event.target);
+      if (!isClickInsideNav && navLinksElement.classList.contains('active')) {
+        navLinksElement.classList.remove('active');
+        hamburgerElement.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      const navLinksElement = document.getElementById('nav-links');
+      const hamburgerElement = document.querySelector('.hamburger');
+      if (navLinksElement && navLinksElement.classList.contains('active')) {
+        navLinksElement.classList.remove('active');
+        if (hamburgerElement) {
+          hamburgerElement.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+  });
+});

@@ -3,34 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Explore Africa</title>
+  <meta name="description" content="Learn about Explore Africa Travel—our mission, local regional guides, and commitment to responsible, authentic African journeys.">
+  <title>About Us | Explore Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <nav>
-    <h2>Explore Africa</h2>
-  </nav>
-</header>
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
 
-<section class="page-hero">
-  <h1>About Explore Africa</h1>
-</section>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
 
-<section class="intro section-padding">
-  <!-- Your current intro content -->
-</section>
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="discover section-padding">
-  <!-- Your current discover content -->
-</section>
+  <!-- PAGE HERO BANNER -->
+  <section class="page-hero" aria-label="About Explore Africa banner" style="background: linear-gradient(rgba(18, 35, 50, 0.62), rgba(18, 35, 50, 0.78)), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+    <div class="hero-content">
+      <span class="subheading" style="color: var(--color-gold);">Our Story &amp; Mission</span>
+      <h1>About Explore Africa</h1>
+      <p>Connecting curious travelers with Africa’s extraordinary landscapes, living cultures, and dedicated local guides.</p>
+    </div>
+  </section>
 
-<div style="text-align:center;margin:4rem 0;">
-  <a href="index.html" class="btn">
-    Back Home
-  </a>
-</div>
+  <!-- IMPACT STATS BAR -->
+  <section class="trip-stats" aria-label="Explore Africa milestones">
+    <div class="stat">
+      <h3>3+ Regions</h3>
+      <span>North, East &amp; Southern Africa</span>
+    </div>
+    <div class="stat">
+      <h3>100%</h3>
+      <span>Local Guide Partnerships</span>
+    </div>
+    <div class="stat">
+      <h3>Tailored</h3>
+      <span>Small-Group &amp; Private Routes</span>
+    </div>
+    <div class="stat">
+      <h3>Eco-First</h3>
+      <span>Conservation Focused</span>
+    </div>
+  </section>
 
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- MISSION SPLIT SECTION -->
+    <section class="about-preview">
+      <div class="container layout-split">
+        <div class="text-content">
+          <h2>Travel That Honors Place &amp; People</h2>
+          <p>
+            Explore Africa was founded on a simple belief: the best way to experience the continent is through the eyes of the people who call it home.
+          </p>
+          <p>
+            From navigating Marrakech’s historic medinas and crossing the Sahara with Amazigh guides to tracking wildlife across Kenya’s Maasai Mara and South Africa’s Kruger National Park, we design journeys that balance comfort, depth, and respect for local communities.
+          </p>
+          <a href="destinations.html" class="btn">Explore Our Destinations</a>
+        </div>
+        <figure class="img-wrapper">
+          <img src="https://www.innoafrica.co.tz/wp-content/uploads/2021/08/inno-Africa-Safaris-1-min.png" alt="Safari guide and travelers observing wildlife on the savanna" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- CORE VALUES GRID -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <header class="section-header">
+          <h2>What Sets Us Apart</h2>
+          <span class="subheading">Our Core Travel Principles</span>
+        </header>
+
+        <div class="features">
+          <article class="feature">
+            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+            <h3>Community-Led Tourism</h3>
+            <p>We partner directly with family-owned riads, regional trackers, and community conservancies so tourism benefits local economies.</p>
+          </article>
+
+          <article class="feature">
+            <i class="fas fa-leaf" aria-hidden="true"></i>
+            <h3>Wildlife Conservation</h3>
+            <p>Every safari itinerary supports ethical wildlife viewing standards and protected habitat preservation across national parks.</p>
+          </article>
+
+          <article class="feature">
+            <i class="fas fa-route" aria-hidden="true"></i>
+            <h3>Flexible Travel Styles</h3>
+            <p>Whether you prefer self-drive independence, rooftop 4x4 camping under the stars, or luxury tented lodges, we adapt to you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section-padding">
+      <div class="container" style="max-width: var(--container-narrow); text-align: center;">
+        <header class="section-header">
+          <h2>Ready to Write Your African Story?</h2>
+          <span class="subheading">Start Planning Today</span>
+        </header>
+        <p style="color: var(--color-text-muted); max-width: 650px; margin: 0 auto 2rem;">
+          Tell us where you want to go, how long you have, and what excites you most—we’ll help turn your ideas into a seamless itinerary.
+        </p>
+        <div class="actions-panel" style="justify-content: center;">
+          <a href="contact.html" class="btn">Get in Touch</a>
+          <a href="culture.html" class="btn btn-secondary">Discover African Culture</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Explore Africa</h3>
+        <p>Discover breathtaking destinations across Kenya, Morocco, and South Africa. Travel. Experience. Remember.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="legal.html">Privacy Policy</a></li>
+          <li><a href="legal.html#terms">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="newsletter" action="#" method="POST">
+          <label for="newsletter-email" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GLOBAL JAVASCRIPT -->
+  <script src="main.js" defer></script>
 </body>
 </html>

@@ -2,33 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Culture | Explore Africa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Africa's rich cultural tapestry—from Berber artisans and Maasai traditions to Cape Malay cuisine and West African rhythms.">
+  <title>African Culture &amp; Heritage | Explore Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <nav>
-    <h2>Explore Africa</h2>
-    <a href="menu.html" class="hamburger">☰</a>
-  </nav>
-</header>
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
 
-<section class="page-hero">
-  <h1>African Culture</h1>
-</section>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
 
-<section class="content">
-  <h2>Music & Dance</h2>
-  <p>Rhythmic traditions passed through generations.</p>
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="culture.html" class="active">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h2>Traditional Clothing</h2>
-  <p>Colorful fabrics representing heritage and identity.</p>
+  <!-- PAGE HERO BANNER -->
+  <section class="page-hero" aria-label="Culture banner" style="background: linear-gradient(rgba(18, 35, 50, 0.62), rgba(18, 35, 50, 0.78)), url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+    <div class="hero-content">
+      <span class="subheading" style="color: var(--color-gold);">Living Traditions</span>
+      <h1>Culture &amp; Heritage of Africa</h1>
+      <p>Experience ancient storytelling, vibrant textiles, ceremonial music, and warm hospitality passed down across generations.</p>
+      <a href="#culture-pillars" class="btn">Explore Traditions</a>
+    </div>
+  </section>
 
-  <h2>Cuisine</h2>
-  <p>Rich flavors influenced by history and geography.</p>
-</section>
+  <!-- CULTURAL HIGHLIGHTS BAR -->
+  <section class="trip-stats" aria-label="Cultural diversity highlights">
+    <div class="stat">
+      <h3>54</h3>
+      <span>Diverse Nations</span>
+    </div>
+    <div class="stat">
+      <h3>2,000+</h3>
+      <span>Living Languages</span>
+    </div>
+    <div class="stat">
+      <h3>UNESCO</h3>
+      <span>Heritage Sites</span>
+    </div>
+    <div class="stat">
+      <h3>100%</h3>
+      <span>Authentic Immersion</span>
+    </div>
+  </section>
 
+  <!-- MAIN CONTENT -->
+  <main id="culture-pillars">
+
+    <!-- EDITORIAL INTRO -->
+    <section class="about-preview">
+      <div class="container layout-split">
+        <div class="text-content">
+          <h2>Beyond the Landscape</h2>
+          <p>
+            While Africa’s savannas, deserts, and coastlines draw travelers from around the world, its true heartbeat lives in its people. Every region carries centuries of oral history, communal celebrations, and artistic mastery.
+          </p>
+          <p>
+            Our journeys connect you respectfully with local artisans, musicians, and community hosts—turning travel into genuine cultural exchange.
+          </p>
+        </div>
+        <figure class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=900&q=80" alt="Traditional cultural gathering on the East African savanna" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- FOUR CULTURAL PILLARS -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <header class="section-header">
+          <h2>Pillars of African Heritage</h2>
+          <span class="subheading">Art, Rhythm, Flavor &amp; Community</span>
+        </header>
+
+        <div class="experience-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80" alt="Intricate Moroccan tilework and souk crafts" loading="lazy">
+            <div class="card-body">
+              <h3>Artisans &amp; Textiles</h3>
+              <p>From hand-loomed Berber rugs and Moroccan zellige tilework to West African kente and adire dyeing, craftsmanship tells ancestral stories.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Traditional ceremonial dance and music" loading="lazy">
+            <div class="card-body">
+              <h3>Music &amp; Storytelling</h3>
+              <p>Polyrhythmic drumming, Gnawa trance melodies, griot oral historians, and ceremonial dances celebrate milestones and community unity.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Spices, tagines, and communal African dining" loading="lazy">
+            <div class="card-body">
+              <h3>Culinary Traditions</h3>
+              <p>Share slow-cooked Moroccan tagines, Ethiopian injera platters, coastal Swahili spices, and Cape Malay heritage dishes around the table.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Historic desert kasbah architecture" loading="lazy">
+            <div class="card-body">
+              <h3>Sacred Architecture</h3>
+              <p>Explore earthen kasbahs in the Atlas foothills, ancient rock-hewn churches, and historic Swahili stone towns along the Indian Ocean.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONAL CULTURAL IMMERSIONS (ALTERNATING CARDS) -->
+    <section class="section-padding">
+      <div class="container" style="max-width: var(--container-narrow);">
+        <header class="section-header">
+          <h2>Regional Cultural Experiences</h2>
+          <span class="subheading">Where Tradition Meets Travel</span>
+        </header>
+
+        <article class="species-card">
+          <div class="species-image-wrapper">
+            <img class="species-image" src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80" alt="Marrakech medina and mint tea hospitality" loading="lazy">
+          </div>
+          <div class="species-content">
+            <h3 class="species-title">North Africa: Amazigh &amp; Medina Life</h3>
+            <span class="adaptation-tag">Morocco &amp; The Sahara</span>
+            <p>
+              Step inside historic Fez tanneries, share sweet mint tea with Amazigh (Berber) families in High Atlas villages, and listen to desert rhythms under Saharan stars.
+            </p>
+            <a href="morocco.html" class="btn btn-secondary">Explore Morocco &rarr;</a>
+          </div>
+        </article>
+
+        <article class="species-card">
+          <div class="species-image-wrapper">
+            <img class="species-image" src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="Maasai cultural heritage in Kenya" loading="lazy">
+          </div>
+          <div class="species-content">
+            <h3 class="species-title">East Africa: Maasai &amp; Swahili Coast</h3>
+            <span class="adaptation-tag">Kenya &amp; Great Rift Valley</span>
+            <p>
+              Learn pastoral traditions and beadwork artistry alongside Maasai hosts in the Mara, then trace centuries of maritime trade in Lamu and Mombasa.
+            </p>
+            <a href="kenya.html" class="btn btn-secondary">Explore Kenya &rarr;</a>
+          </div>
+        </article>
+
+        <article class="species-card">
+          <div class="species-image-wrapper">
+            <img class="species-image" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Colorful Bo-Kaap neighborhood in Cape Town" loading="lazy">
+          </div>
+          <div class="species-content">
+            <h3 class="species-title">Southern Africa: Rainbow Nation Heritage</h3>
+            <span class="adaptation-tag">South Africa &amp; Cape Peninsula</span>
+            <p>
+              Walk the vibrant cobblestone streets of Cape Town’s Bo-Kaap, explore Zulu heritage in KwaZulu-Natal, and experience contemporary African art galleries.
+            </p>
+            <a href="southafrica.html" class="btn btn-secondary">Explore South Africa &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RESPONSIBLE TRAVEL CALLOUT -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt);">
+      <div class="container" style="max-width: var(--container-narrow);">
+        <div class="day-list">
+          <h3 style="color: var(--color-primary); margin-bottom: 0.75rem;">Responsible Cultural Travel Etiquette</h3>
+          <ul>
+            <li><strong>Ask Before Photographing:</strong> Always request permission with a smile before taking portraits of locals or artisans at work.</li>
+            <li><strong>Support Direct Craftsmanship:</strong> Purchase textiles, pottery, and carvings directly from local cooperatives and makers.</li>
+            <li><strong>Learn Local Greetings:</strong> Simple phrases like <em>Salam Alaikum</em> (Morocco), <em>Jambo / Asante</em> (Kenya), or <em>Sawubona</em> (South Africa) open warm conversations.</li>
+          </ul>
+        </div>
+
+        <div class="cta-wrapper">
+          <a href="contact.html" class="btn">Plan a Cultural Immersion Trip</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Explore Africa</h3>
+        <p>Discover breathtaking destinations across Kenya, Morocco, and South Africa. Travel. Experience. Remember.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="legal.html">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="newsletter" action="#" method="POST">
+          <label for="newsletter-email" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GLOBAL JAVASCRIPT -->
+  <script src="main.js" defer></script>
 </body>
 </html>

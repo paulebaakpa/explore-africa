@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy, Terms & Conditions, and traveler data protection guidelines for Explore Africa Travel.">
+  <title>Privacy Policy &amp; Terms | Explore Africa</title>
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="main-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
+
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul id="nav-links" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- STICKY INTERNAL JUMP NAV -->
+  <nav class="itinerary-nav" aria-label="Legal sections">
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms &amp; Conditions</a>
+    <a href="#cookies">Cookies &amp; Security</a>
+    <a href="index.html">&larr; Back to Home</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="section-padding">
+    <div class="container" style="max-width: var(--container-narrow);">
+
+      <article class="itinerary-card">
+        <span class="subheading" style="margin-bottom: 0.4rem;">Last Updated: November 2026</span>
+        <h1>Privacy Policy &amp; Terms of Service</h1>
+        <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
+          At Explore Africa, we respect your privacy and are committed to protecting any personal information you share while planning your journeys with us.
+        </p>
+
+        <!-- PRIVACY POLICY -->
+        <section id="privacy" style="scroll-margin-top: 130px; margin-bottom: 2.5rem;">
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-bottom: 1rem;">1. Privacy Policy</h2>
+          <p style="margin-bottom: 1rem;">
+            When you submit a travel inquiry or subscribe to our newsletter, we collect only the contact details necessary to respond to your request—such as your name, email address, preferred destination, and trip preferences.
+          </p>
+          <div class="day-list">
+            <ul>
+              <li><strong>How We Use Your Data:</strong> Solely to prepare custom itineraries, answer questions, and send destination updates if you opt into our newsletter.</li>
+              <li><strong>Zero Third-Party Selling:</strong> We never sell, rent, or trade your personal information to third-party advertisers.</li>
+              <li><strong>Your Rights:</strong> You may request access to, correction of, or deletion of your contact information at any time via our <a href="contact.html" style="color: var(--color-terracotta); font-weight: 600;">Contact Page</a>.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- TERMS & CONDITIONS -->
+        <section id="terms" style="scroll-margin-top: 130px; margin-bottom: 2.5rem;">
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-bottom: 1rem;">2. Terms &amp; Conditions</h2>
+          <p style="margin-bottom: 1rem;">
+            By browsing Explore Africa or requesting itinerary proposals, you agree to the following general terms:
+          </p>
+          <div class="day">
+            <h3>Itinerary Estimates &amp; Seasonal Availability</h3>
+            <p>Sample routes, wildlife migration windows, and regional highlights are provided for informational planning purposes. Final travel dates and lodge availability are confirmed upon booking.</p>
+          </div>
+          <div class="day">
+            <h3>Passports, Visas &amp; Travel Insurance</h3>
+            <p>Travelers are responsible for ensuring valid passports, regional entry visas, recommended vaccinations, and comprehensive travel insurance prior to departure.</p>
+          </div>
+        </section>
+
+        <!-- COOKIES & SECURITY -->
+        <section id="cookies" style="scroll-margin-top: 130px; margin-bottom: 2rem;">
+          <h2 style="border-left: 5px solid var(--color-accent); padding-left: 15px; margin-bottom: 1rem;">3. Cookies &amp; External Links</h2>
+          <p>
+            Our website uses minimal essential browser storage to ensure smooth navigation and interactive destination filtering. Links to external photography credits or social platforms are governed by their respective privacy policies.
+          </p>
+        </section>
+
+        <div class="actions-panel" style="justify-content: center; margin-top: 2.5rem;">
+          <a href="contact.html" class="btn">Questions? Contact Us</a>
+          <a href="index.html" class="btn btn-secondary">&larr; Return Home</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Explore Africa</h3>
+        <p>Discover breathtaking destinations across Kenya, Morocco, and South Africa. Travel. Experience. Remember.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>More Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="legal.html">Privacy Policy</a></li>
+          <li><a href="legal.html#terms">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Subscribe</h4>
+        <form class="newsletter" action="#" method="POST">
+          <label for="newsletter-email" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GLOBAL JAVASCRIPT -->
+  <script src="main.js" defer></script>
+</body>
+</html>

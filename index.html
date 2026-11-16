@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover breathtaking destinations, safaris, and cultures across Africa with Explore Africa Travel.">
   <title>Explore Africa | Adventure & Safaris</title>
+  <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +15,6 @@
     <nav class="nav-container" aria-label="Main Navigation">
       <a href="index.html" class="logo"><h2>Explore Africa</h2></a>
       
-      <!-- Added ARIA attributes for accessibility -->
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
         ☰
       </button>
@@ -33,52 +33,44 @@
     <div class="hero-content">
       <h1>Discover the Beauty of Africa</h1>
       <p>Adventure, culture, and unforgettable experiences.</p>
-      </div>
+      <a href="destinations.html" class="btn">Start Your Journey</a>
+    </div>
   </section>
 
-  <section class="trip-stats">
-  <div class="stat">
-    <h3>2</h3>
-    <span>Routes</span>
-  </div>
-
-  <div class="stat">
-    <h3>5+</h3>
-    <span>Cities</span>
-  </div>
-
-  <div class="stat">
-    <h3>Atlas</h3>
-    <span>Mountains</span>
-  </div>
-
-  <div class="stat">
-    <h3>Sahara</h3>
-    <span>Desert Camp</span>
-  </div>
-</section>
+  <!-- TRIP STATS -->
+  <section class="trip-stats" aria-label="Travel highlights">
+    <div class="stat">
+      <h3>2</h3>
+      <span>Routes</span>
+    </div>
+    <div class="stat">
+      <h3>5+</h3>
+      <span>Cities</span>
+    </div>
+    <div class="stat">
+      <h3>Atlas</h3>
+      <span>Mountains</span>
+    </div>
+    <div class="stat">
+      <h3>Sahara</h3>
+      <span>Desert Camp</span>
+    </div>
+  </section>
 
   <!-- MAIN CONTENT -->
   <main id="main-content">
 
-<section class="about-preview">
-
-  <div class="container">
-
-    <h2>Why Travel With Explore Africa?</h2>
-
-    <p>
-      Discover authentic safaris, cultural journeys, and unforgettable adventures
-      across Africa with carefully planned travel experiences.
-    </p>
-
-    <a href="about.html" class="btn">
-      Learn More
-    </a>
-
-  </div>
-
-</section>
+    <!-- ABOUT PREVIEW (Fixed Split Layout) -->
+    <section class="about-preview">
+      <div class="container layout-split">
+        <div class="text-content">
+          <h2>Why Travel With Explore Africa?</h2>
+          <p>
+            Discover authentic safaris, cultural journeys, and unforgettable adventures
+            across Africa with carefully planned travel experiences.
+          </p>
+          <a href="about.html" class="btn">Learn More</a>
+        </div>
         <figure class="img-wrapper">
           <img src="https://www.innoafrica.co.tz/wp-content/uploads/2021/08/inno-Africa-Safaris-1-min.png" 
                alt="Safari vehicle observing wildlife in the national park" 
@@ -95,7 +87,6 @@
         </header>
 
         <div class="experience-grid">
-
           <article class="card">
             <img src="https://res.cloudinary.com/travelbetablog/images/v1756106605/shutterstock_2471550769_fqmcxa/shutterstock_2471550769_fqmcxa.jpg?_i=AA" 
                  alt="Rooftop camping setup on a 4x4 vehicle under a clear sky" 
@@ -147,7 +138,6 @@
               </p>
             </div>
           </article>
-
         </div>
 
         <div class="cta-wrapper">
@@ -163,8 +153,6 @@
   <!-- FOOTER -->
   <footer class="main-footer">
     <div class="footer-container">
-
-      <!-- About -->
       <div class="footer-section">
         <h3>Explore Africa</h3>
         <p>
@@ -173,7 +161,6 @@
         </p>
       </div>
 
-      <!-- Quick Links -->
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
@@ -183,7 +170,6 @@
         </ul>
       </div>
 
-      <!-- More -->
       <div class="footer-section">
         <h4>More Links</h4>
         <ul>
@@ -192,7 +178,6 @@
         </ul>
       </div>
 
-      <!-- Newsletter -->
       <div class="footer-section">
         <h4>Subscribe</h4>
         <form class="newsletter" action="#" method="POST">
@@ -201,33 +186,22 @@
           <button type="submit" class="btn btn-submit">Join</button>
         </form>
       </div>
-
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2026 Explore Africa. All Rights Reserved.</p>
     </div>
-
-
   </footer>
 
-  <div id="progressBar"></div>
-
-  <!-- JAVASCRIPT -->
-  <!-- Replaced full jQuery library with lightweight Vanilla JS for better performance -->
   <script>
-    // Smooth, modern mobile menu toggle
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       const hamburger = document.querySelector('.hamburger');
-      
       navLinks.classList.toggle('active');
-      
-      // Accessibility update
-      const isOpen = navLinks.classList.contains('active');
-      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
     }
   </script>
-
+  <script src="main.js" defer></script>
+  
 </body>
 </html>
