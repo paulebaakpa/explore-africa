@@ -1052,4 +1052,144 @@ section > .container > h2 {
   }
 }
 
+/* ==========================================================================
+   SCROLL-REVEAL ANIMATIONS (PROGRESSIVE ENHANCEMENT)
+   ========================================================================== */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility: Disable motion for users who prefer reduced animations */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   ATMOSPHERIC IMAGE BACKGROUNDS & PARALLAX CALLOUTS
+   ========================================================================== */
+.hero {
+  background:
+    linear-gradient(rgba(18, 35, 50, 0.55), rgba(18, 35, 50, 0.72)),
+    url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=80')
+      center/cover no-repeat;
+}
+
+.cta-banner {
+  background:
+    linear-gradient(rgba(18, 35, 50, 0.72), rgba(18, 35, 50, 0.82)),
+    url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1920&q=80')
+      center/cover fixed no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 5.5rem 1.5rem;
+}
+
+.cta-banner h2 {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.cta-banner p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    background-attachment: scroll;
+  }
+}
+
+/* ==========================================================================
+   CLICKABLE IMAGES & FULL-SCREEN LIGHTBOX MODAL
+   ========================================================================== */
+.clickable-photo {
+  cursor: zoom-in;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.clickable-photo:hover {
+  filter: brightness(1.04);
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(12, 22, 32, 0.92);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.image-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-lightbox img {
+  max-width: min(92vw, 1100px);
+  max-height: 76vh;
+  border-radius: var(--radius-md, 12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  object-fit: contain;
+  transform: scale(0.96);
+  transition: transform 0.3s ease;
+}
+
+.image-lightbox.is-open img {
+  transform: scale(1);
+}
+
+.lightbox-caption {
+  color: #f4f4f4;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.98rem;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 720px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: var(--color-accent, #e07a5f);
+  transform: scale(1.06);
+}
 
