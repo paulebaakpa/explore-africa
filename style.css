@@ -1193,3 +1193,28 @@ section > .container > h2 {
   transform: scale(1.06);
 }
 
+/* ==========================================================================
+   BRAND LOGO EMBLEM (AUTO-APPLIED ACROSS ALL PAGES)
+   ========================================================================== */
+.logo h2::before {
+  content: "🌍 ";
+  display: inline-block;
+  margin-right: 0.35rem;
+  font-style: normal;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   CUISINE ORIGIN BADGE
+   ========================================================================== */
+.cuisine-origin {
+  display: inline-block;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent, #e07a5f);
+  margin-bottom: 0.45rem;
+}
+
