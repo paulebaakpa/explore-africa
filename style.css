@@ -1256,3 +1256,39 @@ section > .container > h2 {
 .card-highlights strong {
   color: var(--color-primary, #122332);
 }
+
+/* ==========================================================================
+   DESTINATION CARD "BOOK NOW" ACTION BUTTONS
+   ========================================================================== */
+.experience-grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-grid .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.experience-grid .card-body .btn-book-now {
+  margin-top: auto;
+  align-self: flex-start;
+  background-color: var(--color-accent, #e07a5f);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.experience-grid .card-body .btn-book-now:hover {
+  background-color: var(--color-primary, #122332);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(18, 35, 50, 0.2);
+}
+
+/* Keep paired buttons on destinations.html neatly spaced */
+.experience-grid .card-body .btn + .btn-book-now {
+  margin-top: 0.65rem;
+}

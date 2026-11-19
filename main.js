@@ -259,3 +259,80 @@ document.addEventListener('DOMContentLoaded', () => {
       { passive: true }
     );
   }
+
+  /* ------------------------------------------------------------------------
+     6. AUTOMATIC "BOOK NOW" CTA ON DESTINATION CARDS + CONTACT FORM PRE-FILL
+     ------------------------------------------------------------------------ */
+  const destinationCards = document.querySelectorAll(
+    '.experience-grid .card, .itinerary-card'
+  );
+
+  destinationCards.forEach((card) => {
+    const cardBody = card.querySelector('.card-body') || card;
+    const titleEl = cardBody.querySelector('h3');
+    if (!titleEl) return;
+
+    const destinationTitle = titleEl.textContent.trim();
+    const bookingUrl = `contact.html?destination=${encodeURIComponent(destinationTitle)}`;
+
+    // Check if the card already has a button/link inside .card-body
+    const existingBtn = cardBody.querySelector('.btn');
+
+    if (existingBtn) {
+      // Upgrade existing "Include X in Trip" / "Explore" buttons on regional pages
+      // while keeping "Explore [Country]" directory links on destinations.html intact
+      const isDirectoryLink =
+        existingBtn.getAttribute('href') &&
+        existingBtn.getAttribute('href') !== 'contact.html' &&
+        !existingBtn.getAttribute('href').startsWith('contact.html?');
+
+      if (!isDirectoryLink) {
+        existingBtn.textContent = 'Book Now →';
+        existingBtn.setAttribute('href', bookingUrl);
+        existingBtn.classList.remove('btn-secondary');
+        existingBtn.classList.add('btn-book-now');
+      } else {
+        // Add a secondary "Book Now" button beside "Explore [Country]" on destinations.html
+        const bookBtn = document.createElement('a');
+        bookBtn.href = bookingUrl;
+        bookBtn.className = 'btn btn-book-now';
+        bookBtn.textContent = 'Book Now →';
+        cardBody.appendChild(bookBtn);
+      }
+    } else {
+      // Inject a new "Book Now" button at the bottom of cards without buttons
+      const bookBtn = document.createElement('a');
+      bookBtn.href = bookingUrl;
+      bookBtn.className = 'btn btn-book-now';
+      bookBtn.textContent = 'Book Now →';
+      cardBody.appendChild(bookBtn);
+    }
+  });
+
+  // On contact.html: automatically pre-fill the inquiry form if ?destination= is in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedDestination = urlParams.get('destination');
+
+  if (selectedDestination) {
+    const messageField = document.querySelector(
+      'textarea[name="message"], #message, textarea'
+    );
+    const subjectField = document.querySelector(
+      'input[name="subject"], #subject, select[name="destination"], #destination'
+    );
+
+    if (subjectField) {
+      if (subjectField.tagName === 'SELECT') {
+        const match = Array.from(subjectField.options).find((opt) =>
+          selectedDestination.toLowerCase().includes(opt.text.toLowerCase())
+        );
+        if (match) subjectField.value = match.value;
+      } else {
+        subjectField.value = `Booking Inquiry: ${selectedDestination}`;
+      }
+    }
+
+    if (messageField && !messageField.value.trim()) {
+      messageField.value = `Hello Explore Africa team,\n\nI would like to book or get more details about the "${selectedDestination}" experience. Please share available dates and pricing.\n`;
+    }
+  }
