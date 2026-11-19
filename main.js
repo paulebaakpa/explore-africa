@@ -336,3 +336,91 @@ document.addEventListener('DOMContentLoaded', () => {
       messageField.value = `Hello Explore Africa team,\n\nI would like to book or get more details about the "${selectedDestination}" experience. Please share available dates and pricing.\n`;
     }
   }
+
+  /* ------------------------------------------------------------------------
+     7. UNIVERSAL REACT ROTATING GLOBE (INLINE INSIDE HEADER LOGO)
+     ------------------------------------------------------------------------ */
+  const logoContainer =
+    document.querySelector('.logo h2') ||
+    document.querySelector('.logo h1') ||
+    document.querySelector('.logo');
+
+  if (logoContainer && !logoContainer.querySelector('.rotating-globe-mount')) {
+    const mountNode = document.createElement('span');
+    mountNode.className = 'rotating-globe-mount';
+    logoContainer.prepend(mountNode);
+
+    const mountReactGlobe = () => {
+      const { useState, useEffect, createElement: h } = window.React;
+
+      function RotatingGlobe() {
+        const phases = ['🌍', '🌎', '🌏'];
+        const [frame, setFrame] = useState(0);
+        const [isFast, setIsFast] = useState(false);
+
+        useEffect(() => {
+          const interval = setInterval(() => {
+            setFrame((prev) => (prev + 1) % phases.length);
+          }, isFast ? 220 : 850);
+
+          return () => clearInterval(interval);
+        }, [isFast]);
+
+        return h(
+          'span',
+          {
+            className: 'rotating-globe-react',
+            title: 'Click to toggle spin speed',
+            onMouseEnter: () => setIsFast(true),
+            onMouseLeave: () => setIsFast(false),
+            onClick: (e) => {
+              e.preventDefault();
+              setIsFast((prev) => !prev);
+            },
+            style: {
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.35rem',
+              cursor: 'pointer',
+              transition: 'transform 0.3s ease',
+              transform: isFast ? 'scale(1.15)' : 'scale(1)'
+            }
+          },
+          phases[frame]
+        );
+      }
+
+      window.ReactDOM.createRoot(mountNode).render(h(RotatingGlobe));
+    };
+
+    const loadScript = (src) =>
+      new Promise((resolve, reject) => {
+        const existing = document.querySelector(`script[src="${src}"]`);
+        if (existing) {
+          existing.addEventListener('load', resolve);
+          return;
+        }
+        const script = document.createElement('script');
+        script.src = src;
+        script.crossOrigin = 'anonymous';
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+
+    if (window.React && window.ReactDOM) {
+      mountReactGlobe();
+    } else {
+      mountNode.textContent = '🌍';
+      Promise.all([
+        loadScript('https://unpkg.com/react@18/umd/react.production.min.js'),
+        loadScript('https://unpkg.com/react-dom@18/umd/react-dom.production.min.js')
+      ])
+        .then(() => {
+          mountNode.textContent = '';
+          mountReactGlobe();
+        })
+        .catch(() => {});
+    }
+  }

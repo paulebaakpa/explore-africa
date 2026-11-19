@@ -1193,16 +1193,6 @@ section > .container > h2 {
   transform: scale(1.06);
 }
 
-/* ==========================================================================
-   BRAND LOGO EMBLEM (AUTO-APPLIED ACROSS ALL PAGES)
-   ========================================================================== */
-.logo h2::before {
-  content: "🌍 ";
-  display: inline-block;
-  margin-right: 0.35rem;
-  font-style: normal;
-  vertical-align: middle;
-}
 
 /* ==========================================================================
    CUISINE ORIGIN BADGE
@@ -1291,4 +1281,25 @@ section > .container > h2 {
 /* Keep paired buttons on destinations.html neatly spaced */
 .experience-grid .card-body .btn + .btn-book-now {
   margin-top: 0.65rem;
+}
+
+
+/* ==========================================================================
+   HEADER LOGO & ROTATING GLOBE HORIZONTAL ALIGNMENT
+   ========================================================================== */
+.logo,
+.logo h2,
+.logo h1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.rotating-globe-mount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
