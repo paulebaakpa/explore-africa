@@ -190,3 +190,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ------------------------------------------------------------------------
+     5. HAMBURGER HOVER & CLICK OPEN WITH AUTOMATIC MOUSE-LEAVE CLOSE
+     ------------------------------------------------------------------------ */
+  const hamburgerBtn = document.querySelector('.hamburger');
+  const navMenu = document.getElementById('nav-links');
+
+  if (hamburgerBtn && navMenu) {
+    let hoverCloseTimer = null;
+    let openedViaHoverAt = 0;
+
+    const openNavMenu = () => {
+      clearTimeout(hoverCloseTimer);
+      navMenu.classList.add('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeNavMenu = () => {
+      clearTimeout(hoverCloseTimer);
+      navMenu.classList.remove('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    const scheduleCloseNavMenu = () => {
+      clearTimeout(hoverCloseTimer);
+      hoverCloseTimer = setTimeout(() => {
+        closeNavMenu();
+      }, 180);
+    };
+
+    // Keep global onclick="toggleMenu()" safe when user hovers then clicks
+    window.toggleMenu = () => {
+      const justHoveredOpen = Date.now() - openedViaHoverAt < 350;
+      if (justHoveredOpen && navMenu.classList.contains('active')) {
+        return; // Don't immediately close if mouseenter just opened it
+      }
+
+      if (navMenu.classList.contains('active')) {
+        closeNavMenu();
+      } else {
+        openNavMenu();
+      }
+    };
+
+    // 1. Open on hover and keep open while pointer is over button or dropdown
+    hamburgerBtn.addEventListener('mouseenter', () => {
+      if (!navMenu.classList.contains('active')) {
+        openedViaHoverAt = Date.now();
+      }
+      openNavMenu();
+    });
+
+    navMenu.addEventListener('mouseenter', openNavMenu);
+
+    // 2. Whether opened by hover OR click, auto-close once mouse leaves both
+    hamburgerBtn.addEventListener('mouseleave', scheduleCloseNavMenu);
+    navMenu.addEventListener('mouseleave', scheduleCloseNavMenu);
+
+    // 3. Also auto-close if user starts scrolling down the page
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (navMenu.classList.contains('active')) {
+          closeNavMenu();
+        }
+      },
+      { passive: true }
+    );
+  }
