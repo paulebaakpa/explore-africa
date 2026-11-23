@@ -424,3 +424,66 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(() => {});
     }
   }
+
+  /* ------------------------------------------------------------------------
+     8. LIVE PALETTE SWITCHER (KALAHARI OLIVE <-> SAVANNA DUSK)
+     ------------------------------------------------------------------------ */
+  const STORAGE_KEY = 'explore-africa-theme';
+  const THEMES = {
+    kalahari: {
+      id: 'kalahari',
+      label: '🌿 Kalahari',
+      nextTitle: 'Switch to Savanna Dusk & Terracotta palette'
+    },
+    savanna: {
+      id: 'savanna-dusk',
+      label: '🌅 Savanna',
+      nextTitle: 'Switch to Kalahari Olive & Sandstone palette'
+    }
+  };
+
+  const applyTheme = (themeKey, btn) => {
+    const isSavanna = themeKey === 'savanna-dusk';
+    if (isSavanna) {
+      document.documentElement.setAttribute('data-theme', 'savanna-dusk');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem(STORAGE_KEY, isSavanna ? 'savanna-dusk' : 'kalahari');
+
+    if (btn) {
+      const current = isSavanna ? THEMES.savanna : THEMES.kalahari;
+      btn.textContent = current.label;
+      btn.setAttribute('title', current.nextTitle);
+      btn.setAttribute('aria-pressed', String(isSavanna));
+    }
+  };
+
+  // Restore saved palette on page load
+  const savedTheme = localStorage.getItem(STORAGE_KEY) || 'kalahari';
+  applyTheme(savedTheme, null);
+
+  // Inject switcher button into the header navigation bar
+  const navContainer = document.querySelector('.nav-container');
+  const hamburgerBtn = navContainer ? navContainer.querySelector('.hamburger') : null;
+
+  if (navContainer && !navContainer.querySelector('.theme-switcher-btn')) {
+    const themeBtn = document.createElement('button');
+    themeBtn.type = 'button';
+    themeBtn.className = 'theme-switcher-btn';
+    themeBtn.setAttribute('aria-label', 'Toggle website color palette');
+
+    applyTheme(savedTheme, themeBtn);
+
+    themeBtn.addEventListener('click', () => {
+      const active = document.documentElement.getAttribute('data-theme');
+      const nextTheme = active === 'savanna-dusk' ? 'kalahari' : 'savanna-dusk';
+      applyTheme(nextTheme, themeBtn);
+    });
+
+    if (hamburgerBtn) {
+      navContainer.insertBefore(themeBtn, hamburgerBtn);
+    } else {
+      navContainer.appendChild(themeBtn);
+    }
+  }
